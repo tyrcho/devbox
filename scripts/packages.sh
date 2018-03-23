@@ -22,3 +22,10 @@ pacman -S virtualbox-guest-utils --noconfirm
 
 #IDE
 pacman -S jdk9-openjdk maven intellij-idea-community-edition --noconfirm
+
+
+pacman -S docker --noconfirm
+systemctl enable docker
+systemctl start docker
+usermod -aG docker vagrant
+
