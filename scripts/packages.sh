@@ -19,3 +19,6 @@ pacman -S terminator gvim rofi --noconfirm
 #VirtualBox additions with X support
 pacman -R virtualbox-guest-utils-nox --noconfirm
 pacman -S virtualbox-guest-utils --noconfirm
+
+#IDE
+pacman -S jdk9-openjdk maven intellij-idea-community-edition --noconfirm
