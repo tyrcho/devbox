@@ -16,3 +16,6 @@ echo 'LC_CTYPE=en_US.UTF-8' >> /etc/environment
 
 
 ln -sf /usr/share/zoneinfo/Europe/Paris /etc/localtime
+
+localectl set-x11-keymap fr
+
