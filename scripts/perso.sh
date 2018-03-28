@@ -2,6 +2,9 @@
 
 su vagrant <<EOF
 cd 
+
+[[ -f ~/.proxy_env ]] && . ~/.proxy_env
+
 git clone https://github.com/tyrcho/dotfiles.git
 cp -r dotfiles/. .
 

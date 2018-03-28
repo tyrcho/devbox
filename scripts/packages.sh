@@ -2,11 +2,7 @@
 
 sudo su -
 
-pwd
-
-ls -la
-
-. ~/.proxy_env
+[[ -f ~/.proxy_env ]] && . ~/.proxy_env
 
 pacman-key --init
 pacman-key --populate archlinux
