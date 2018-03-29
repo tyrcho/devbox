@@ -1,23 +1,6 @@
 #!/bin/sh
 
-sudo su -
-
 [[ -f ~/.proxy_env ]] && . ~/.proxy_env
-
-pacman-key --init
-pacman-key --populate archlinux
-pacman-key --update
-
-pacman -Syu --noconfirm
-
-# basics
-cat <<EOT >> /etc/pacman.conf 
-[archlinuxfr]
-SigLevel = Never
-Server = http://repo.archlinux.fr/\$arch
-EOT
-
-pacman -Sy yaourt  --noconfirm
 
 alias install="yaourt --noconfirm -S"
 
@@ -35,5 +18,5 @@ fc-cache
 install terminator gvim rofi
 
 #VirtualBox additions with X support
-pacman -R virtualbox-guest-utils-nox --noconfirm
+sudo pacman -R virtualbox-guest-utils-nox --noconfirm
 install virtualbox-guest-utils 

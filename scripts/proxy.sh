@@ -1,7 +1,5 @@
 #!/bin/sh
 
-sudo su -
-
 cat <<EOT > ~/.proxy_env
 #!/bin/sh
 
