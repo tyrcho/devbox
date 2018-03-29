@@ -11,6 +11,12 @@ pacman-key --update
 pacman -Syu --noconfirm
 
 # basics
+cat <<EOT >> /etc/pacman.conf 
+[archlinuxfr]
+SigLevel = Never
+Server = http://repo.archlinux.fr/\$arch
+EOT
+
 pacman -Sy yaourt  --noconfirm
 
 alias install="yaourt --noconfirm -S"
