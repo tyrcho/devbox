@@ -10,23 +10,31 @@ pacman-key --update
 
 pacman -Syu --noconfirm
 
-pacman -S git ansible  --noconfirm
+# basics
+pacman -Sy yaourt  --noconfirm
+
+alias install="yaourt --noconfirm -S"
+
+install git ansible base-devel binutils patch make fakeroot 
 
 # windows manager
-pacman -S lightdm i3 xorg xorg-xinit --noconfirm
+install lightdm i3 xorg-server xorg-xinit xorg-xrdb xorg-xfd  numix-themes-darkblue 
+
+# fonts
+install ttf-fira-sans ttf-hack  
 
 # gui programs
-pacman -S terminator gvim rofi --noconfirm
+install terminator gvim rofi
 
 #VirtualBox additions with X support
 pacman -R virtualbox-guest-utils-nox --noconfirm
-pacman -S virtualbox-guest-utils --noconfirm
+install virtualbox-guest-utils 
 
 #IDE
-pacman -S jdk9-openjdk maven intellij-idea-community-edition --noconfirm
+install jdk9-openjdk maven intellij-idea-community-edition
 
 
-pacman -S docker --noconfirm
+install docker 
 systemctl enable docker
 systemctl start docker
 usermod -aG docker vagrant
