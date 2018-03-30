@@ -11,7 +11,6 @@ install git
 # windows manager
 install lightdm i3 xorg-server xorg-xinit xorg-xrdb xorg-xfd  
 install lxappearance-gtk3
-install numix-themes-darkblue 
 
 #VirtualBox additions with X support
 sudo pacman -R virtualbox-guest-utils-nox --noconfirm
