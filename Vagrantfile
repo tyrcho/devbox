@@ -13,6 +13,9 @@ Vagrant.configure("2") do |config|
     config.vm.box = "archlinux/archlinux"
     config.vm.box_version = "2018.03.09"
 
+
+    config.vm.provision "file", source: "~/.ssh/id_rsa", destination: "~/.ssh/id_rsa"
+
     config.vm.provision "shell", path: "scripts/setup.sh"
     config.vm.provision "shell", path: "scripts/proxy.sh" if use_proxy
     config.vm.provision "shell", path: "scripts/pacman_yaourt.sh"
