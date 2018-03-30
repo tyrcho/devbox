@@ -6,11 +6,8 @@ if VAGRANT_COMMAND == "ssh"
 #  config.ssh.username = ENV['USERNAME']
 end
 
-# see https://stackoverflow.com/questions/26434923/parse-command-line-arguments-in-a-ruby-script
-args = Hash[ ARGV.flat_map{|s| s.scan(/--?([^=\s]+)(?:=(\S+))?/) } ]
-
-use_proxy = args.key?('proxy')
-use_all = args.key?('all_packages')
+use_proxy = ENV.key?('HTTP_PROXY')
+use_all = ENV.key?('DEVBOX_ALL_PACKAGES')
 
 Vagrant.configure("2") do |config|
     config.vm.box = "archlinux/archlinux"

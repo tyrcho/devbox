@@ -4,10 +4,18 @@
 
 alias install="yaourt --noconfirm -S"
 
-install git base-devel binutils patch make fakeroot
+install base-devel 
+install binutils patch make fakeroot
+install git
 
 # windows manager
-install lightdm i3 xorg-server xorg-xinit xorg-xrdb xorg-xfd  numix-themes-darkblue 
+install lightdm i3 xorg-server xorg-xinit xorg-xrdb xorg-xfd  
+install lxappearance-gtk3
+install numix-themes-darkblue 
+
+#VirtualBox additions with X support
+sudo pacman -R virtualbox-guest-utils-nox --noconfirm
+install virtualbox-guest-utils 
 
 # fonts
 install ttf-fira-sans ttf-hack
@@ -15,8 +23,8 @@ install ttf-fira-sans ttf-hack
 fc-cache
 
 # gui programs
-install terminator gvim rofi
+install terminator 
+install gvim 
+install rofi
 
-#VirtualBox additions with X support
-sudo pacman -R virtualbox-guest-utils-nox --noconfirm
-install virtualbox-guest-utils 
+
