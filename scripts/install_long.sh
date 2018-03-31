@@ -18,7 +18,7 @@ install python
 install ansible
 
 # Java IDE
-install jdk9-openjdk maven ttf-liberation intellij-idea-community-edition
+install jdk9-openjdk maven ttf-liberation intellij-idea-ultimate-edition #intellij-idea-community-edition
 
 # mkdir -p ~/.IdeaIC2018.1/config/settingsRepository/repository
 # cd ~/.IdeaIC2018.1/config/settingsRepository/
