@@ -13,6 +13,11 @@ install jdk9-openjdk maven ttf-liberation intellij-idea-community-edition
 #browser
 install google-chrome
 
+#languages
+
+install ruby
+install python
+
 #docker
 install docker 
 sudo systemctl enable docker
