@@ -16,7 +16,7 @@ install google-chrome
 #docker
 install docker 
 sudo systemctl enable docker
-sudo systemctl start docker
+#sudo systemctl start docker
 sudo usermod -aG docker vagrant
 
 #TODO: Proxy configuration
