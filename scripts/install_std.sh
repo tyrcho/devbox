@@ -6,7 +6,7 @@ alias install="yaourt --noconfirm -S"
 
 install base-devel 
 install binutils patch make fakeroot
-install git wget
+install git wget unzip vifm
 
 # windows manager
 install lightdm i3 xorg-server xorg-xinit xorg-xrdb xorg-xfd  
@@ -25,5 +25,8 @@ fc-cache
 install terminator 
 install gvim 
 install rofi
+
+# json in shell
+install jq
 
 
