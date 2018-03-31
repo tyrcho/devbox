@@ -4,14 +4,25 @@
 
 alias install="yaourt --noconfirm -S"
 
+# ansible
 install ansible
 
-#IDE
-install jdk9-openjdk maven intellij-idea-community-edition
+# Java IDE
+install jdk9-openjdk maven ttf-liberation intellij-idea-community-edition
+
+#browser
+install google-chrome
 
 #docker
 install docker 
-systemctl enable docker
-systemctl start docker
-usermod -aG docker vagrant
+sudo systemctl enable docker
+sudo systemctl start docker
+sudo usermod -aG docker vagrant
 
+#TODO: Proxy configuration
+#Create a Drop-in snippet with the following content:
+#
+#/etc/systemd/system/docker.service.d/proxy.conf
+#[Service]
+#Environment="HTTP_PROXY=192.168.1.1:8080"
+#Environment="HTTPS_PROXY=192.168.1.1:8080"
