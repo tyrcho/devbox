@@ -17,15 +17,6 @@ install python
 # ansible
 install ansible
 
-# Java IDE
-install jdk9-openjdk maven ttf-liberation intellij-idea-ultimate-edition #intellij-idea-community-edition
-
-# mkdir -p ~/.IdeaIC2018.1/config/settingsRepository/repository
-# cd ~/.IdeaIC2018.1/config/settingsRepository/
-# git clone https://github.com/tyrcho/idea-settings.git repository
-# cd repository
-# cp .gitignore .git/info/exclude
-
 #docker
 install docker 
 sudo systemctl enable docker
