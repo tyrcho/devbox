@@ -2,6 +2,8 @@
 
 [[ -f ~/.proxy_env ]] && . ~/.proxy_env
 
+chmod 700 ~/.ssh/id_rsa
+
 git init
 git remote add origin  https://github.com/tyrcho/dotfiles.git
 git fetch
