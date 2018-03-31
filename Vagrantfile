@@ -6,8 +6,9 @@ if VAGRANT_COMMAND == 'ssh'
 #  config.ssh.username = ENV['USERNAME']
 end
 
-use_proxy = ENV.key?('HTTP_PROXY')
-use_all = ENV.key?('DEVBOX_ALL_PACKAGES')
+use_proxy = ENV.key? 'HTTP_PROXY'
+use_all = ENV.key? 'DEVBOX_ALL_PACKAGES'
+box_name = ENV.fetch 'BOX_NAME', 'arch-devbox'
 
 Vagrant.configure('2') do |config|
     config.vm.box = 'archlinux/archlinux'
@@ -24,8 +25,8 @@ Vagrant.configure('2') do |config|
     config.vm.provision 'shell', path: 'scripts/perso.sh', privileged: false
     config.vm.provision 'shell', path: 'scripts/install_long.sh', privileged: false if use_all
 
-    config.vm.network :forwarded_port, host: 8080, guest: 8080
-    config.vm.network :forwarded_port, host: 9000, guest: 9000
+    # config.vm.network :forwarded_port, host: 8080, guest: 8080
+    # config.vm.network :forwarded_port, host: 9000, guest: 9000
 
     config.ssh.insert_key = true
     config.vm.synced_folder '.', '/vagrant', disabled: true
@@ -34,7 +35,7 @@ Vagrant.configure('2') do |config|
         vb.gui = true
         vb.cpus = 2
         vb.memory = 4096
-        vb.customize ['modifyvm', :id, '--name', 'arch-devbox']
+        vb.customize ['modifyvm', :id, '--name', box_name]
         vb.customize ['modifyvm', :id, '--vram', 64]
         vb.customize ['modifyvm', :id, '--accelerate3d', 'on']
         vb.customize ['modifyvm', :id, '--clipboard', 'bidirectional']
