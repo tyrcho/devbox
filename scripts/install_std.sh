@@ -6,7 +6,7 @@ alias install="yaourt --noconfirm -S"
 
 install base-devel 
 install binutils patch make fakeroot
-install git wget unzip vifm
+install git wget unzip vifm dos2unix
 
 # windows manager
 install lightdm i3 xorg-server xorg-xinit xorg-xrdb xorg-xfd  
