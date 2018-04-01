@@ -37,6 +37,7 @@ download  7253 # Pegdown doclet
 download  7345 # presentation assistant
 download  8182 # rust
 download  9792 # Key Promoter X
+download 10037 # csv
 download 10315 # gitmoji
 
 cd $pluginFolder
