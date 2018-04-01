@@ -8,6 +8,10 @@ mkdir -p ~/Downloads
 echo "TMPDIR=~/Downloads" > ~/.yaourtrc
 
 install jdk9-openjdk maven ttf-liberation
+sudo su <<EOT
+echo "export JAVA_HOME=/usr/lib/jvm/java-9-openjdk" >> /etc/bash.bashrc
+EOT
+
 install intellij-idea-ultimate-edition #intellij-idea-community-edition
 
 # .IdeaIC2018.1 for community editio
