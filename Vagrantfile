@@ -34,8 +34,8 @@ Vagrant.configure('2') do |config|
 
     config.vm.provider 'virtualbox' do |vb|
         vb.gui = true
-        vb.cpus = 2
-        vb.memory = 4096
+        vb.cpus = 3
+        vb.memory = 8192
         vb.customize ['modifyvm', :id, '--name', box_name]
         vb.customize ['modifyvm', :id, '--vram', 64]
         vb.customize ['modifyvm', :id, '--accelerate3d', 'on']
