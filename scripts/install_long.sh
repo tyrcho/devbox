@@ -14,6 +14,8 @@ gem install rdoc rspec bundler
 
 install python
 
+install scala sbt
+
 # ansible
 install ansible
 
