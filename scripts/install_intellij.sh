@@ -35,6 +35,7 @@ download  4230 # bash
 download  7138 # frame switcher
 download  7253 # Pegdown doclet
 download  7345 # presentation assistant
+download  7575 # autoscroll save
 download  7896 # Markdown Navigator
 download  8182 # rust
 download  9792 # Key Promoter X
