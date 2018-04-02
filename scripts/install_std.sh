@@ -9,7 +9,7 @@ install binutils patch make fakeroot
 install git wget unzip vifm dos2unix
 
 # windows manager
-install lightdm i3 xorg-server xorg-xinit xorg-xrdb xorg-xfd  
+install lightdm i3 xorg-server xorg-xinit xorg-xrdb xorg-xfd xorg-xprop
 install lxappearance-gtk3
 
 #VirtualBox additions with X support
