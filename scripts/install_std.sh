@@ -10,7 +10,7 @@ install git wget unzip vifm dos2unix corkscrew
 
 # windows manager
 install lightdm i3 xorg-server xorg-xinit xorg-xrdb xorg-xfd xorg-xprop
-install lxappearance-gtk3
+install lxappearance-gtk3 numlockx
 
 #VirtualBox additions with X support
 sudo pacman -R virtualbox-guest-utils-nox --noconfirm
