@@ -21,6 +21,12 @@ EOT
 cp ~/.proxy_env ~vagrant/.proxy_env
 chown vagrant:vagrant ~vagrant/.proxy_env
 
+mkdir /etc/systemd/system/docker.service.d/
+cat <<EOT > /etc/systemd/system/docker.service.d/http-proxy.conf
+[Service]
+Environment="HTTP_PROXY=proxy-internet.localnet:3128"
+EOT
+
 su vagrant <<EOF
 cd 
 echo ". ~/.proxy_env" >> .bashrc
