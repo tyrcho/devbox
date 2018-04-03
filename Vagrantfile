@@ -25,7 +25,7 @@ Vagrant.configure('2') do |config|
     config.vm.provision 'shell', path: 'scripts/perso.sh', privileged: false
     config.vm.provision 'shell', path: 'scripts/install_long.sh', privileged: false if use_all
     config.vm.provision 'shell', path: 'scripts/install_intellij.sh', privileged: false if use_all
-    config.vm.provision 'shell', path: 'scripts/proxy_last.sh' if use_proxy
+    config.vm.provision 'shell', path: 'scripts/proxy_last.sh', privileged: false if use_proxy
 
     # config.vm.network :forwarded_port, host: 8080, guest: 8080
     # config.vm.network :forwarded_port, host: 9000, guest: 9000
