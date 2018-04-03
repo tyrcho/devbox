@@ -10,6 +10,7 @@
 ## :sparkles: Features
 
 - detects if HTTP_PROXY is set on the host, only run proxy configuration on the guest if it is the case
+- configure proxy for Chrome and docker
 - copy ssh private key from host to guest
 - can install IntelliJ with your favorite plugins and configuration (from a git repository)
 

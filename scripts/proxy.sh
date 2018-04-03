@@ -21,6 +21,7 @@ EOT
 cp ~/.proxy_env ~vagrant/.proxy_env
 chown vagrant:vagrant ~vagrant/.proxy_env
 
+
 mkdir /etc/systemd/system/docker.service.d/
 cat <<EOT > /etc/systemd/system/docker.service.d/http-proxy.conf
 [Service]
@@ -30,4 +31,21 @@ EOT
 su vagrant <<EOF
 cd 
 echo ". ~/.proxy_env" >> .bashrc
+
+mkdir ~/.m2
+cat <<EOT > ~/.m2/settings.xml
+<settings>
+  <proxies>
+   <proxy>
+      <id>wl-proxy</id>
+      <active>true</active>
+      <protocol>http</protocol>
+      <host>proxy-internet.localnet</host>
+      <port>3128</port>
+      <nonProxyHosts>*.priv.atos.fr</nonProxyHosts>
+    </proxy>
+  </proxies>
+</settings>
+EOT
+
 EOF
