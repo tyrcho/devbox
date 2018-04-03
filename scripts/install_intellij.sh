@@ -46,6 +46,7 @@ cd $pluginFolder
 for f in *.zip; do unzip $f ; rm $f ; done
 
 echo "org.intellij.plugins.markdown" > $configFolder/disabled_plugins.txt 
+echo "org.jetbrains.android" >> $configFolder/disabled_plugins.txt 
 
 mkdir -p $settingsFolder
 git clone https://github.com/tyrcho/idea-settings.git $settingsFolder
