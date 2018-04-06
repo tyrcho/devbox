@@ -6,7 +6,7 @@ cat <<EOT > ~/.proxy_env
 export PROXY_SERVER="proxy-internet.localnet"
 export PROXY_PORT="3128"
 
-export http_proxy="\${PROXY_SERVER}:\${PROXY_PORT}"
+export http_proxy="http://\${PROXY_SERVER}:\${PROXY_PORT}"
 export HTTP_PROXY="\${http_proxy}"
 export https_proxy="\${http_proxy}"
 export HTTPS_PROXY="\${http_proxy}"
