@@ -12,8 +12,11 @@ install google-chrome
 install ruby
 gem install rdoc rspec bundler
 
+#python 2 & 3 with pip
 install python
+install python2
 install python-pip
+install python2-pip
 
 install scala sbt
 
