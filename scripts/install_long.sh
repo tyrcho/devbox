@@ -13,6 +13,7 @@ install ruby
 gem install rdoc rspec bundler
 
 install python
+install python-pip
 
 install scala sbt
 
