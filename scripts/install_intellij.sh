@@ -32,6 +32,7 @@ download   631 # python
 download  1293 # ruby
 download  1347 # scala
 download  4230 # bash
+download  5007 # sbt
 download  7138 # frame switcher
 download  7253 # Pegdown doclet
 download  7345 # presentation assistant
