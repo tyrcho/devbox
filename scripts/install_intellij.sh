@@ -12,10 +12,11 @@ sudo su <<EOT
 echo "export JAVA_HOME=/usr/lib/jvm/java-9-openjdk" >> /etc/bash.bashrc
 EOT
 
-install intellij-idea-ultimate-edition #intellij-idea-community-edition
+install intellij-idea-community-edition 
+#install intellij-idea-ultimate-edition
 
-# .IdeaIC2018.1 for community editio
-configFolder="/home/vagrant/.IntelliJIdea2018.1/config"
+configFolder="/home/vagrant/.IdeaIC2018.1/config"       # Community
+#configFolder="/home/vagrant/.IntelliJIdea2018.1/config" # Ultimate
 pluginFolder="$configFolder/plugins/"
 settingsFolder="$configFolder/settingsRepository/repository"
 
