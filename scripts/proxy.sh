@@ -3,8 +3,8 @@
 cat <<EOT > ~/.proxy_env
 #!/bin/sh
 
-export PROXY_SERVER="proxy-internet.localnet"
-export PROXY_PORT="3128"
+export PROXY_SERVER="$PROXY_SERVER"
+export PROXY_PORT="$PROXY_PORT"
 
 export http_proxy="http://\${PROXY_SERVER}:\${PROXY_PORT}"
 export HTTP_PROXY="\${http_proxy}"
@@ -25,7 +25,7 @@ chown vagrant:vagrant ~vagrant/.proxy_env
 mkdir /etc/systemd/system/docker.service.d/
 cat <<EOT > /etc/systemd/system/docker.service.d/http-proxy.conf
 [Service]
-Environment="HTTP_PROXY=proxy-internet.localnet:3128"
+Environment="HTTP_PROXY=$PROXY_SERVER:$PROXY_PORT"
 EOT
 
 su vagrant <<EOF
@@ -40,9 +40,9 @@ cat <<EOT > ~/.m2/settings.xml
       <id>wl-proxy</id>
       <active>true</active>
       <protocol>http</protocol>
-      <host>proxy-internet.localnet</host>
-      <port>3128</port>
-      <nonProxyHosts>*.priv.atos.fr</nonProxyHosts>
+      <host>$PROXY_SERVER</host>
+      <port>$PROXY_PORT</port>
+      <nonProxyHosts>$NO_PROXY</nonProxyHosts>
     </proxy>
   </proxies>
 </settings>
