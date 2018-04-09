@@ -7,12 +7,12 @@ alias install="yaourt --noconfirm -S"
 mkdir -p ~/Downloads
 echo "TMPDIR=~/Downloads" > ~/.yaourtrc
 
-install jdk9-openjdk maven ttf-liberation
+install jdk9 maven ttf-liberation
 sudo su <<EOT
-echo "export JAVA_HOME=/usr/lib/jvm/java-9-openjdk" >> /etc/bash.bashrc
+echo "export JAVA_HOME=/usr/lib/jvm/java-9-jdk" >> /etc/bash.bashrc
 EOT
 
-install intellij-idea-community-edition 
+install intellij-idea-community-edition
 #install intellij-idea-ultimate-edition
 
 configFolder="/home/vagrant/.IdeaIC2018.1/config"       # Community
