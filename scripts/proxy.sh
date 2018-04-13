@@ -5,6 +5,8 @@ cat <<EOT > ~/.proxy_env
 
 export PROXY_SERVER="$PROXY_SERVER"
 export PROXY_PORT="$PROXY_PORT"
+export PROXY_PAC="$PROXY_PAC"
+export NO_PROXY="$NO_PROXY"
 
 export http_proxy="http://\${PROXY_SERVER}:\${PROXY_PORT}"
 export HTTP_PROXY="\${http_proxy}"
@@ -14,8 +16,7 @@ export ftp_proxy="\${http_proxy}"
 export FTP_PROXY="\${http_proxy}"
 export rsync_proxy="\${http_proxy}"
 export RSYNC_PROXY="\${http_proxy}"
-export no_proxy="localhost,127.0.0.1,priv.atos.fr"
-export NO_PROXY="\${no_proxy}"
+export no_proxy="\${NO_PROXY}"
 EOT
 
 cp ~/.proxy_env ~vagrant/.proxy_env
