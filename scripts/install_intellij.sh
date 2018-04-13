@@ -47,10 +47,20 @@ download 10315 # gitmoji
 cd $pluginFolder
 for f in *.zip; do unzip $f ; rm $f ; done
 
-echo "org.intellij.plugins.markdown" > $configFolder/disabled_plugins.txt 
-echo "org.jetbrains.android" >> $configFolder/disabled_plugins.txt 
+echo "org.intellij.plugins.markdown" > $configFolder/disabled_plugins.txt
+echo "org.jetbrains.android" >> $configFolder/disabled_plugins.txt
 
 mkdir -p $settingsFolder
 git clone https://github.com/tyrcho/idea-settings.git $settingsFolder
 cd $settingsFolder
 cp .gitignore .git/info/exclude
+
+[[ -f ~/.proxy_env ]] && cat <<EOT > $settingsFolder/proxy.settings.xml
+<application>
+  <component name="HttpConfigurable">
+    <option name="USE_PROXY_PAC" value="true" />
+    <option name="USE_PAC_URL" value="true" />
+    <option name="PAC_URL" value="$PROXY_PAC" />
+  </component>
+</application>
+EOT
