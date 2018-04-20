@@ -20,11 +20,19 @@ install python2-pip
 
 install scala sbt
 
+#haskell
+install ncurses5-compat-libs
+install ghc
+install ghc-static
+install cabal-install
+ln -s /usr/lib/libtinfo.so.5 /usr/lib/libtinfo.so.6
+cabal update
+
 # ansible
 install ansible
 
 #docker
-install docker 
+install docker
 sudo systemctl enable docker
 #sudo systemctl start docker
 sudo usermod -aG docker vagrant
