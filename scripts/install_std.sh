@@ -9,6 +9,9 @@ install binutils patch make fakeroot
 install git wget zip unzip vifm dos2unix corkscrew tk fzf 
 install ack thefuck htop lftp aria2 nnn
 
+curl -s "https://get.sdkman.io" | bash
+source "/home/vagrant/.sdkman/bin/sdkman-init.sh"
+
 # windows manager
 install lightdm i3 xorg-server xorg-xinit xorg-xrdb xorg-xfd xorg-xprop
 install lxappearance-gtk3 numlockx
