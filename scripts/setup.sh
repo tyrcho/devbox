@@ -16,3 +16,13 @@ cat <<EOT > /etc/systemd/system/getty@tty1.service.d/override.conf
 ExecStart=
 ExecStart=-/usr/bin/agetty --autologin vagrant --noclear %I $TERM
 EOT
+
+pacman-key --init
+pacman-key --populate archlinux
+pacman-key --update
+
+pacman -Syu --noconfirm
+
+pacman -Sy git --noconfirm
+pacman -S --noconfirm binutils patch make fakeroot
+

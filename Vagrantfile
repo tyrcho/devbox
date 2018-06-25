@@ -21,14 +21,14 @@ end
 
 Vagrant.configure('2') do |config|
     config.vm.box = 'archlinux/archlinux'
-    config.vm.box_version = '2018.03.09'
+    config.vm.box_version = '2018.06.05'
 
 
     config.vm.provision 'file', source: '~/.ssh/id_rsa', destination: '~/.ssh/id_rsa'
 
     config.vm.provision 'shell', path: 'scripts/setup.sh'
     config.vm.provision 'shell', path: 'scripts/proxy.sh', env: proxy_env if use_proxy
-    config.vm.provision 'shell', path: 'scripts/pacman_yaourt.sh'
+    config.vm.provision 'shell', path: 'scripts/aurman.sh', privileged: false
     config.vm.provision 'shell', path: 'scripts/install_std.sh', privileged: false
     config.vm.provision 'shell', path: 'scripts/locale.sh'
     config.vm.provision 'shell', path: 'scripts/perso.sh', privileged: false

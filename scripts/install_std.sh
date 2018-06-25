@@ -2,10 +2,9 @@
 
 [[ -f ~/.proxy_env ]] && . ~/.proxy_env
 
-alias install="yaourt --noconfirm -S"
+alias install="aurman --noconfirm -S"
 
 install base-devel
-install binutils patch make fakeroot
 install git wget zip unzip vifm dos2unix corkscrew tk fzf 
 install ack thefuck htop lftp aria2 nnn
 
